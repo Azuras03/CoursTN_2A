@@ -20,6 +20,6 @@ Ces 4 semaines ont été saupoudrées de réunions régulières avec mon maître
 
 L'application est terminée j'ai fait ma part du travail, c'est au tour maintenant de mes collègues de déployer l'application au CHU pour qu'elle puisse servir.
 
-Pour finir j'ai envie de vous parler des conditions horaires. Si vous connaissez les labos vous savez que l'on peut venir un peu quand on veut. Ca vend du rêve dit comme ça, on se dit vas-y je me pointe à 10h je repars à 11h, mais c'est évidemment à double tranchant, parce qu'on a un sujet à faire. Donc ça demande de la discipline, faut gérer ses heures tout seul pour être sûr d'arriver à un résultat au final. Et personnellement j'ai beaucoup aimé ce système. Ca donne beaucoup de liberté et c'est tout aussi efficace de travailler comme ça si on gère bien notre temps.
+Pour finir j'ai envie de vous parler du rythme de travail que j'avais. Si vous connaissez les labos vous savez que l'on peut venir un peu quand on veut. Ca vend du rêve dit comme ça, on se dit vas-y je me pointe à 10h je repars à 11h, mais c'est évidemment à double tranchant, parce qu'on a un sujet à faire. Donc ça demande de la discipline, faut gérer ses heures tout seul pour être sûr d'arriver à un résultat au final. Et personnellement j'ai beaucoup aimé ce système. Ca donne beaucoup de liberté et c'est tout aussi efficace de travailler comme ça si on gère bien notre temps.
 
 Merci de m'avoir écouté !
