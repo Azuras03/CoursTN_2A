@@ -7,3 +7,4 @@ Questions : Mini-exercice 1 : Pourquoi on n'a pas les inégalités seules avec X
 CM2 :
 
 A venir
+Lire de page 18 à 25
