@@ -12,4 +12,4 @@ Lire de page 18 à 25
 
 CM3 :
 
-Lire de page 26 à 33 (sans la mise à jour du dico)
+Lire de page 26 à 32 (sans la mise à jour du dico) et mini-exercice 6
