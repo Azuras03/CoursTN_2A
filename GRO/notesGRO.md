@@ -8,3 +8,8 @@ CM2 :
 
 A venir
 Lire de page 18 à 25
+
+
+CM3 :
+
+Lire de page 26 à 33 (sans la mise à jour du dico)
