@@ -4205,8 +4205,8 @@
     },
     {
       "type": "text",
-      "version": 7,
-      "versionNonce": 2000729776,
+      "version": 8,
+      "versionNonce": 222700123,
       "isDeleted": false,
       "id": "sX6dostCAxapY7lsYoAq3",
       "fillStyle": "solid",
@@ -4226,7 +4226,7 @@
       "frameId": null,
       "roundness": null,
       "boundElements": [],
-      "updated": 1757937520940,
+      "updated": 1757939373112,
       "link": null,
       "locked": false,
       "fontSize": 20,
@@ -4241,8 +4241,8 @@
     },
     {
       "type": "text",
-      "version": 5,
-      "versionNonce": 592399440,
+      "version": 6,
+      "versionNonce": 1801979093,
       "isDeleted": false,
       "id": "U5edG_mbBd92W3thM6r3h",
       "fillStyle": "solid",
@@ -4262,7 +4262,7 @@
       "frameId": null,
       "roundness": null,
       "boundElements": [],
-      "updated": 1757937520941,
+      "updated": 1757939373113,
       "link": null,
       "locked": false,
       "fontSize": 20,
@@ -4277,8 +4277,8 @@
     },
     {
       "type": "line",
-      "version": 22,
-      "versionNonce": 112622419,
+      "version": 57,
+      "versionNonce": 585278069,
       "isDeleted": false,
       "id": "bGBM6eBLT8SS-8pNXg1Y5",
       "fillStyle": "solid",
@@ -4300,7 +4300,7 @@
         "type": 2
       },
       "boundElements": [],
-      "updated": 1757936301470,
+      "updated": 1757940503270,
       "link": null,
       "locked": false,
       "startBinding": null,
@@ -4312,6 +4312,10 @@
         [
           0,
           0
+        ],
+        [
+          -180,
+          60
         ],
         [
           -220,
@@ -4365,8 +4369,8 @@
     },
     {
       "type": "text",
-      "version": 28,
-      "versionNonce": 1968595120,
+      "version": 29,
+      "versionNonce": 1655119611,
       "isDeleted": false,
       "id": "LDPxtGChzKZyz0uqNnDrM",
       "fillStyle": "solid",
@@ -4386,7 +4390,7 @@
       "frameId": null,
       "roundness": null,
       "boundElements": [],
-      "updated": 1757937520942,
+      "updated": 1757939373114,
       "link": null,
       "locked": false,
       "fontSize": 20,
