@@ -61,11 +61,40 @@ h) Vrai
 
 ## Situation concrète
 
-- Se faire accompagner par un huissier pour faire "pression", montrer à l'employeur le droit ?
+- Se faire accompagner par un huissier pour faire "pression", avoir une preuve officielle irréfutable. Acteur de la vie publique qu'on a de plus en plus souvent. Huissier c'est un commissaire public. Pour constater les faits ou nous défendre. Ex : Les constats de huissier. Il peut constater une attitude. Un témoin dont les écrits ont une force probante. On le paye, son déplacement, mais ça vaut le coup niveau preuve
 - Différences entre juge fond/forme :
-  - Juge de fond : Traite l'histoire, les sentiments, la psychologie, les préjudices
-  - Juge de forme : Regarde si les bons textes de loi ont été invoqués. Ne juge l'histoire que dans le cadre légal
-- Première fois : Première
-- Dénouement : La personne a reçu les intérêts
+  - Juge de fond : Traite l'histoire, les sentiments, la psychologie, les préjudices. Premier degré et deuxième.
+  - Juge de forme : Regarde si les bons textes de loi ont été invoqués. Ne juge l'histoire que dans le cadre légal : Cour de cassation
+- Par paragraphes : 
+  - Les faits, soit disant des malversations (détournement d'argent). Menacé physiquement, illégal. Il a fait une gifle (manu militari : tout de suite).
+  - Revient avec huissier dans l'entreprise. Il est encore au travail, c'est qu'une parole de l'employeur. Donc on revient. Faut demander un écrit sinon, sinon ça peut être vu comme une désertion de poste.
+    - Le patron refait la même chose. Violence morale avec insultes, mais on a le huissier.
+  - L'employeur téléphone pour dire au huissier qu'il a été brutal, mais que c'était parce qu'il y avait faute grave (!= faute lourde) 
+  - Courrier de mise à pied envoyé, mais Mr Cline ne répond pas.
+  - Prud'hommes (environ 117800€ de dédommagement)
+  - Résultat : OK bien licenciement, mais pas le droit à tout. Donc faute grave
+  - Il fait appel, mais la cour pense que c'est une démission de lui, après les 3 jours de mise à pied. Infirme prud'hommes
+  - Cline est encore moins content. Cour de cassation.
+  - Cour de cassation infirme cour d'appel. Peut pas être démission car pas de volonté claire et équivoque. Si on démissionne on a un courrier. Aussi elle dit que la cour d'appel a commis deux erreurs : 1er - il a été évincé physiquement (générer peur) et le fait de pas revenir car peur n'illustre pas une démission. S'il y a rupture du contrat, c'est l'employeur. Il n'a pas donné de lettre de licenciement. Il ne peut pas être licenciement sans motif réel/sérieux.  
+  - La personne a reçu les intérêts (87000€).
+- Hiérarchie des preuves : Classement en fonction de force probante
+  - Preuves parfaites
+    - Ecrits
+      - Actes authentiques (devant une autorité, comme maire, notaire, ...)
+      - Signature (problématiques de signature électronique)
+  - Preuves imparfaites : Indiquer certaines choses aux juges
+    - Témoignages
+    - Aveux
 
-Loi de la preuve
+-----
+
+**Droit du travail**:
+- **Motif réel/sérieux** pour le licenciement (personnelles)
+  - Insuffisance professionnelle (pas assez investi)
+  - Les fautes :
+    - **Grave** (détériorer l'entreprise, détournement de fond, tyrannique, mauvais climat, parfois ciblée sur une personne, ...)
+    - **Lourde** (nuire à l'entreprise, exploser la chaine de production)
+- **Sanctions** :
+  - Avertissements
+  - Blâme (lettre accusé réception)
+  - Mise à pied (lettre accusé réception)
