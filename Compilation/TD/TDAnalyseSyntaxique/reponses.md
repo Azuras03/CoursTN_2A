@@ -1,6 +1,6 @@
 # TD Analyse Syntaxique
 
-## Question 1
+### Question 1
 
 Unités lexicales = { **nil** ; **(** ; **)** ; **entier** ; **,** ; **.** }
 
@@ -26,7 +26,7 @@ S -> ,AS | ^
 
 La grammaire n'est pas LL(1). Si on commence avec "(A" on ne sait pas à quel endroit on est (soit (A.A) ou (AS)).
 
-## Question 2
+### Question 2
 
 Comment la rendre LL(1) : On regroupe les mêmes préfixes
 
@@ -123,7 +123,7 @@ analyse_V() :
 ```
 
 analyse_A():
-``` 
+```
     si (code_unite_lex == code_parenthese_ouvrante) :
     alors
         lire()
@@ -150,3 +150,119 @@ si Analyse_A():
         alors OK
         sinon ...
 ```
+
+### Question 3
+
+Quand on rencontre une virgule ("(1,2)"), on remplace par un point ("(1.(2.nil))")
+
+
+
+analyse_V() : 
+``` 
+    // On met les trucs qu'il analyse. Si c'est un non-terminal, on fait plusieurs clauses pour qu'il aille aux bonnes fonctions
+    si code_unite_lex == code_entier :
+    alors
+        lire()
+        ecrire("ent")
+        return true
+    sinon si code_untite_lex == code_nil
+        lire()
+        ecrire("nil")
+        return true
+    sinon
+        ecrire("entier ou nil attendu")
+        return false
+```
+
+analyse_A():
+```
+    si (code_unite_lex == code_parenthese_ouvrante) :
+    alors
+        lire()
+        ecrire("(")
+        return analyse_A() && analyse_X()
+    sinon
+        analyse_V()
+```
+
+analyse_S():
+``` 
+    si (code_unite_lex == code_virgule) :
+    alors
+        lire()
+        ecrire(".(")
+        analyse_A()
+        analyse_S()
+        ecrire(")")
+    sinon
+        ecrire(".")
+        ecrire("nil")
+        return true
+```
+
+analyse_X():
+```
+    si (code_unite_lex == code_point):
+        lire()
+        ecrire(".")
+        analyse_A()
+        si code_unite_lex == code_parenthese_fermante
+            ecrire (")")
+            lire()
+        sinon
+            erreur
+    sinon
+        analyse_S()
+        si code_unite_lex == code_parenthese_fermante
+            ecrire (")")
+            lire()
+        sinon
+            erreur
+```
+
+Code global :
+```
+main()
+si Analyse_A():
+    alors si code_unite = $ // Caractère de fin de fichier
+        alors OK
+        sinon ...
+```
+
+## Analyse syntaxique ascendante
+
+### Exercice 1
+
+A' - A [r0]
+
+A - V [r1] | (A.A) [r2] | (AS) [r3]
+
+S - ,AS [r4] | ^ [r5]
+
+V - ent [r6] | nil [r7]
+
+SLR(1) ?
+- Automate LR(0)
+- Table SLR(1)
+- Conclusion
+
+**Premier**
+
+Premier(A) = {entier; nil; (}
+
+Premier(X) = {. ; )}
+
+Premier(V) = {entier; nil}
+
+Premier(S) = {, ; )}
+
+**Suivant**
+
+Suivant(A) = { ) ; $ ; . ; , }
+
+Suivant(X) = Suivant(A)
+
+Suivant(V) = Suivant(A)
+
+Suivant(S) = { ) }
+
