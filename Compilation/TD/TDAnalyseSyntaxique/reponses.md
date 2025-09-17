@@ -266,3 +266,9 @@ Suivant(V) = Suivant(A)
 
 Suivant(S) = { ) }
 
+Table SLR(1):
+- Automate LR(0)
+- Table action/transition
+- Idem analyse LR(0)
+- sauf pour les états de réduction
+
