@@ -16,9 +16,10 @@ Je vous résume ces 4 semaines :
 3ème semaine : J'intègre les fonctionnalités principales et elles fonctionnent bien.
 4ème semaine : Je fais tester mon application, je demande des retours pour qu'elle soit la plus intuitive et propre. C'est aussi un bon moyen de trouver des bugs.
 
-Ces 4 semaines ont été saupoudrées de réunions régulières avec mon maître de stage pour être sûr que le projet allait dans la bonne direction. Ca serait dommage de pas en faire et de se retrouver avec une appli qui a aucun rapport, genre on me demande de faire un morpion et je fais un sudoku.
+<!-- Les 4 semaines ont été saupoudrées de réunions régulières avec mon maître de stage pour être sûr que le projet allait dans la bonne direction. Ca serait dommage de pas en faire et de se retrouver avec une appli qui a aucun rapport, genre on me demande de faire un morpion et je fais un sudoku.
+ -->
 
-Et finalement, j'ai pu terminer  mon application dans le temps imparti ! C'est au tour maintenant de mes collègues de déployer l'application au CHU pour qu'elle puisse servir.
+Et finalement, j'ai réussi à terminer mon application dans le temps imparti ! C'est au tour maintenant de mes collègues de déployer l'application au CHU pour qu'elle puisse servir.
 
 Pour finir j'ai envie de vous parler du rythme de travail que j'avais. Si vous connaissez les labos vous savez que l'on peut venir un peu quand on veut. Ca vend du rêve dit comme ça, on se dit vas-y je me pointe à 10h je repars à 11h, mais c'est évidemment à double tranchant, parce qu'on a un travail à faire. Donc ça demande de la discipline, faut gérer ses heures tout seul pour être sûr d'arriver à un résultat au final. Et personnellement j'ai beaucoup aimé ce système. Ca donne beaucoup de liberté et c'est tout aussi efficace de travailler comme ça si on gère bien notre temps.
 
