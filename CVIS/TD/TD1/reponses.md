@@ -5,6 +5,7 @@
 - [TD1 CVIS](#td1-cvis)
   - [Table des matières](#table-des-matières)
   - [Exercice 1](#exercice-1)
+  - [Exercice 2](#exercice-2)
 
 **Convention du module** : Pour la résolution, on commence par la taille y, puis x.
 
@@ -62,3 +63,7 @@ On peut le faire avec un LUT
 
 Pour la prochaine fois, faire la question 8 dans excalidraw
 Et 9 avec la diapo qui convient après égalisation de l'histogramme.
+
+## Exercice 2
+
+(Voir [ce schéma](schemaEx2.excalidraw))
