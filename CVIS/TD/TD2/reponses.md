@@ -112,10 +112,13 @@ Convolution : Masque 3x3
 
 (M*I)(i,j) = somme de k = -1 à 1 somme de l = -1 à 1 M(k,l)I(i-k,j-l)
 
-Algo : 
+Algo : (et transformer les niveaux de gris en double)
 ```
 Nblignes, Nbcolonnes <- Taille I
+Im = matrice de Nblignes et Nbcolonnes
 pour i = 2 à nblignes -1
    pour i = 2 à nbcol -1
       Im(i,j) <- M(3,3)*I(i-1,j-1)+....
+   fin pour
+fin pour
 ```
