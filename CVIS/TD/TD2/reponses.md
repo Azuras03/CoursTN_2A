@@ -114,6 +114,7 @@ Convolution : Masque 3x3
 
 Algo : (et transformer les niveaux de gris en double)
 ```
+J = double(I)
 Nblignes, Nbcolonnes <- Taille I
 Im = matrice de Nblignes et Nbcolonnes
 pour i = 2 à nblignes -1
