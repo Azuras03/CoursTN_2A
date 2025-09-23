@@ -74,6 +74,7 @@ Matrice ligne de l'image originale :
 (4  3   4   5   25  30  28  25  24  5   6   4   6   3   4   4)
 ```
 Utilisation du filtre F = (-1 0 1)
+
 Ligne résultante (PAS oublier de retourner le filtre) =
 ```
 (0  0   -2  -21 -25 -3  5   4   20  18  1   0   1   2   -1  0)
@@ -82,8 +83,11 @@ Le traitement appliqué correspond à l'analyse des augmentations. Les réductio
 
 2) 
 Module point n°4 : 30
+
 Module point n°5 : 35
+
 Module point n°9 : 28
+
 Module point n°10 : 25
 
 Avec le filtre on fait seulement ressortir les contours.
@@ -91,10 +95,27 @@ Avec le filtre on fait seulement ressortir les contours.
 ## Exercice 4
 
 i1 = (255 255 255 255 0 2 255 255 0 255)
+
 Il faut réordonner le filtre médian et trouver la valeur médiane :
+
 Par exemple avec le centre à 0 : 0 0 0 0 **2** 255 255 255 255
+
 Donc la valeur à mettre au milieu est 2
+
 résultat = (255 255 255 255 2 2 255 255 0 255)
+
 résultat i2 = (255 255 1 0 0 0 0 0 255 255)
 
 Commentaire : Avec le filtre médian, on peut retirer les valeurs aberrantes en regardant le voisinage. Donc ça peut par exemple retirer le bruit impulsionnel (poivre et sel)
+
+Convolution : Masque 3x3
+
+(M*I)(i,j) = somme de k = -1 à 1 somme de l = -1 à 1 M(k,l)I(i-k,j-l)
+
+Algo : 
+```
+Nblignes, Nbcolonnes <- Taille I
+pour i = 2 à nblignes -1
+   pour i = 2 à nbcol -1
+      Im(i,j) <- M(3,3)*I(i-1,j-1)+....
+```
