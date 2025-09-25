@@ -233,13 +233,13 @@ si Analyse_A():
 
 ### Exercice 1
 
-A' - A [r0]
+A' -> A [r0]
 
-A - V [r1] | (A.A) [r2] | (AS) [r3]
+A -> V [r1] | (A.A) [r2] | (AS) [r3]
 
-S - ,AS [r4] | ^ [r5]
+S -> ,AS [r4] | ^ [r5]
 
-V - ent [r6] | nil [r7]
+V -> ent [r6] | nil [r7]
 
 SLR(1) ?
 - Automate LR(0)
@@ -272,3 +272,19 @@ Table SLR(1):
 - Idem analyse LR(0)
 - sauf pour les états de réduction
 
+### Exercice 2
+
+S' -> S
+S -> G = D
+    D
+G -> *d
+    idf
+D -> G
+
+Est-il SLR(1)?
+
+Création d'automate
+
+Pas possible. Pouvons-nous avoir LR(1)?
+- Automate LR(1)
+- Table LR(1)
