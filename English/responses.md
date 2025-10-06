@@ -33,15 +33,49 @@ BA (Hons) : Bachelor with honors
 
 ## Job ads - Abbreviations
 
-1) CCDL
-2) CV
-3) EXP
-4) AGY
-5) OTE
-6) PA
-7) PW
-8) POS
-9) ca.
-10) K
-11) quote ref.
-12) PR
+1) CCDL : Current, clean driver's/driving license
+2) CV : Curriculum Vitae
+3) EXP : Experience
+4) AGY : Agency
+5) OTE : On Target Earnings (the money you make is based on performance)
+6) PA : Per Annum (Per year)
+7) PW : Per Week
+8) POS : Point of Sale 
+9) ca. : Circa (around)
+10) K : thousand
+11) quote ref. : "Please mention this reference number"
+12) PR : Pro rata (proportional on the number of hours you're working)
+
+Skills :
+You must be
+…is essential
+you will have...
+...is necessary
+...is vital
+the successful candidate will be…
+
+Hopes for :
+...is preferred
+...would be advantageous
+ideally you will have…
+...would be a plus
+…would be desirable
+...would be welcome
+
+
+## CV Example
+
+1) Communication
+2) Leadership & Organisation
+3) Adaptability
+4) Research and Computer skills
+
+
+Dissertation : mémoire
+
+Pour la formation : Education
+Expériences professionnelles : Professional Experience
+Centres d'intérêts : Activities and Interests
+
+Languages : Mother tongue, fluent, upper intermediate, beginner, advanced, intermediate
+
