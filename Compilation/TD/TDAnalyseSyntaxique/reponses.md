@@ -274,12 +274,12 @@ Table SLR(1):
 
 ### Exercice 2
 
-S' -> S
-S -> G = D
-    D
-G -> *d
-    idf
-D -> G
+S' -> S [r0]
+S -> G = D [r1]
+    D [r2]
+G -> *d [r3]
+    idf [r4]
+D -> G [r5]
 
 Est-il SLR(1)?
 
@@ -288,3 +288,43 @@ Création d'automate
 Pas possible. Pouvons-nous avoir LR(1)?
 - Automate LR(1)
 - Table LR(1)
+
+### Exercice 1 de retour, mais en ascendant
+
+A' -> A (f0 = {x = depiler; ecrire(x)})
+A -> V
+    (A.A) (f1 = {x1 = depiler(); x2 = depiler(); empiler("(x2.x1)")})
+    (AS)
+S -> ,AS
+    ^
+V -> entier (f2 = empiler(entier))
+    nil (f3 = empiler(nil))
+
+
+#### Si on veut transformer les , par un . :
+
+Arbre syntaxique :
+
+```
+            A'
+            |
+            A
+    |   |   |   |
+    (   A   S   )
+        |   |
+        V  ,AS
+        |   |   |
+            V  ,AS
+                ||
+                V^
+        1 , 2 , 3
+```
+
+A' -> A (f0 = {x = depiler; ecrire(x)})
+A -> V
+    (A.A) (f1 = {x1 = depiler(); x2 = depiler(); empiler("(x2.x1)")})
+    (AS) (f1)
+S -> ,AS (f1)
+    ^   (f3)
+V -> entier (f2 = empiler(entier))
+    nil (f3 = empiler(nil))
