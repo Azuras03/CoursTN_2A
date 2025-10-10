@@ -328,3 +328,119 @@ S -> ,AS (f1)
     ^   (f3)
 V -> entier (f2 = empiler(entier))
     nil (f3 = empiler(nil))
+
+### Nouvel exercice
+
+```
+S' -> A     (f0 = dépiler(x); écrire(x))
+A -> V
+    (C)
+C -> A.A    (f5 : f1 de l'exercice précédent)
+    L       (f4 : x2 = nil; tant que (sommet(pile) != #) x1 = dépiler(); x2 = "(x1.x2)"  finTant; dépiler() // marqueur ; empiler(x2) )
+L -> A      (f3 : x=dépiler();empiler('#');empiler(x))
+    L,A     
+V -> entier (f1 : empiler(ent))
+    nil     (f2 : empiler(nil))
+```
+
+AST : (1,2,3)
+
+```
+    S'
+    |
+    A
+    |
+(   C   )
+    |       (ici, on a fini la liste)
+    L
+   | |
+   L,A
+   | |
+  L,A V
+  | |  |
+  A V ent
+  | |
+  V ent
+  |
+  ent
+
+Pile perso : [1, ]
+```
+
+### Exercice 2 : Mots de Dyck
+
+```
+LP' -> LP           {écrire(nb_mot), écrire(max_imb)}
+LP(1) -> UE LP(2)   {nb_mot(LP1) = 1 + nb_mot(LP2); max_imb(LP1) = MAX(gauche, droit)}
+    UE              {nb_mot(LP) = 1 ; max_imb(LP1) = max_imb(UE)}
+UE -> (LP)          {max_imb(UE) = max_imb(LP) + 1}
+    ()              {max_imb(UE) = 1}
+```
+
+**Attributs** :
+- **Synthétisés** : ceux dont la valeur à un noeud est déterminée à partir de celles de ses fils.
+  - -> Adapté au parcours ASC
+- **Hérités** : Ceux dont la valeur est déterminée en fonction des valeurs des attributs du père.
+  - -> Adapté au parcours DESC
+
+
+Attributs : 
+- Nombre de mots : **nb_mot**
+- Imbrication max : **max_imb**
+
+**AST** de (()) () () (()()) :
+```
+    LP
+UE          LP
+(LP)    UE          LP
+UE      ()      UE          LP
+()              ()          UE
+                            (LP)
+                        UE      LP
+                        ()      UE
+                                ()
+```
+
+## Arbre syntaxique et ambiguité
+
+Grammaire d'expression
+
+```
+E' -> E     [r0]
+E -> E O E  [r1]
+    entier  [r2]
+O -> +      [r3]
+    -       [r4]
+    *       [r5]
+    /       [r6]
+```
+
+Ambiguë, car la production E donne E O E au départ, qui contient E.
+
+        E
+    E   O   E
+    1   +   2
+
+
+Descendant :
+
+```
+E -> entier S
+S -> O E S
+    ^
+```
+
+Toujours ambuguë
+
+Comment rendre la grammaire déterministe ?
+
+Avec ...+5
+Dans le cas 0E1**O**3E8 :
+Si :
+- On a lu + ou -, on réduit (associativité gauche)
+- On a lu * ou /, on réduit (priorité)
+
+Avec ...*5
+Si :
+- On a lu + ou -, on lit (priorité)
+- On a lu * ou /, on réduit (associativité)

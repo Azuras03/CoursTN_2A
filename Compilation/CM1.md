@@ -115,3 +115,8 @@ I3 :
 A - d.
 
 Puis on continue l'automate. Il sera fini et déterministe (LR(0))
+
+
+## Exam
+
+Chapitre début identification, sémantique, typage, déclaration, représentation des tableaux en mémoire. (1h30, sans document)
