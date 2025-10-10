@@ -415,11 +415,7 @@ O -> +      [r3]
     /       [r6]
 ```
 
-Ambiguë, car la production E donne E O E au départ, qui contient E.
-
-        E
-    E   O   E
-    1   +   2
+**Ambiguë**, on peut avoir la même production avec deux arbres différents.
 
 
 Descendant :
@@ -434,8 +430,11 @@ Toujours ambuguë
 
 Comment rendre la grammaire déterministe ?
 
+
 Avec ...+5
+
 Dans le cas 0E1**O**3E8 :
+
 Si :
 - On a lu + ou -, on réduit (associativité gauche)
 - On a lu * ou /, on réduit (priorité)
@@ -443,4 +442,16 @@ Si :
 Avec ...*5
 Si :
 - On a lu + ou -, on lit (priorité)
-- On a lu * ou /, on réduit (associativité)
+- On a lu * ou /, on réduit (associativité gauche)
+
+- 8.1 : E -> E+E.
+- 8.2 : E -> E*E
+- 8.3 : E -> E-E
+- 8.4 : E -> E/E
+
+- En 8.1 et 8.3 : Si on rencontre 
+  - + ou - : Réduction (associativité gauche)
+  - * ou / : Lire (priorité)
+- En 8.2 et 8.4 : Si on rencontre 
+  - + ou - : Réduction (priorité)
+  - * ou / : Réduit (associavité gauche)
