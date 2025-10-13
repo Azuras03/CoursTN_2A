@@ -226,3 +226,61 @@ BLOCK_COMMENT
 WS
     : [ \t\r\n\u000C]+ -> skip
     ;
+
+
+## Classe de test
+
+class Point {
+    int x;
+    int y;
+
+    Point(int x, int y) {
+        this.x = x;
+        this.y = y;
+    }
+
+    int getX() {
+        return x;
+    }
+
+    int getY() {
+        return y;
+    }
+
+    void move(int dx, int dy) {
+        x = x + dx;
+        y = y + dy;
+    }
+}
+
+class ColoredPoint extends Point {
+    String color;
+
+    ColoredPoint(int x, int y, String color) {
+        super(x, y);
+        this.color = color;
+    }
+
+    String getColor() {
+        return color;
+    }
+}
+
+class Main {
+    public static void main(String args[]) {
+        Point p;
+        p = new Point(3, 4);
+        p.move(1, 2);
+
+        ColoredPoint cp;
+        cp = new ColoredPoint(1, 2, "red");
+        cp.move(2, 3);
+
+        if (p.getX() == cp.getX() && p.getY() == cp.getY()) {
+            System.out.println("Same position!");
+        } else {
+            System.out.println("Different positions!");
+        }
+    }
+}
+
