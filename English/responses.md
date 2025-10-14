@@ -79,3 +79,6 @@ Centres d'intérêts : Activities and Interests
 
 Languages : Mother tongue, fluent, upper intermediate, beginner, advanced, intermediate
 
+## Identify the skills
+
+
