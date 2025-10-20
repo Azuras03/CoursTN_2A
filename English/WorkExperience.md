@@ -32,3 +32,25 @@ PhD > Master's degree > Bachelor's degree (licence) > A-levels, high-school dipl
 
 2) I have a licenciate degree from teacher training college. It was a three-year course, so something like a BEd in the UK.
 
+## Definitions
+
+former = ancien
+
+avid ski instructor
+
+### Describing your interests
+
+Reading. Particularly interested in science fiction, particularly as a mirror of our society. I particularly enjoy the works of George Orwell.
+
+Walking. Active member of ligma club (10 hours).
+
+Photography. I'm particularly interested in macro photography, in nature. Trying to get the most interesting picture.
+
+## References
+
+Many people want to know what other people think about someone
+
+Word of mouth (bouche à oreille)
+
+After 5 years, it could be a bit too old
+
