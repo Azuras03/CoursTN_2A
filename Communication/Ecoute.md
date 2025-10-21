@@ -51,3 +51,37 @@ MAIS QUESTCE QUON REPOND ?
 - On peut ne rien dire : Silence attentif, et on lui montre qu'on est disponible
 - Reprendre et reformuler ce qu'il a dit : Oh euh ça fait depuis ça qu'il y a ça ? Et ensuite on demande de valider
   - Pas de conseil, d'enquête, juste une personne prête à en parler davantage.
+
+1. enquete
+2. morale
+3. menace
+4. soutien
+5. conseil
+6. jugement (je donne mon opinion)
+7. ordre / diversion
+8. Reformulation (car on est plus modérés)
+
+Reformulation écho :
+- Reprend un mot-clé (propositions courtes). Hyper efficace sur propos exagérés ("toujours") pour mettre en lumière ce mot
+
+Reformulation reflet/miroir :
+- Renvoyer sans modification le message de départ, quand on doit échanger infos concrètes. Pour vérifier que c'est bien juste
+
+Reformulation inversée :
+- Relève l'implicite. On prend l'autre sens. Ex : "Tout le monde réussit mieux que moi" : "Personne n'est perdu dans le cours?"
+
+Reformulation clarification : 
+- Rassemble les éléments épars du discours (adaptés aux discours longs), synthétise. "Si je comprends bien..."
+
+Reformulation déductive :
+- Rebondir sur ce que dit la personne. Un peu comme une enquête, mais axée sur ce que la personne a déjà dit.
+
+Reformulation interrogative :
+- Question posée, et au lieu d'y répondre on renvoit la question. Si l'on ne sait pas comment répondre ou quand on veut des précisions ou quand on pense que la personne peut y répondre
+
+Reformulation biaisée :
+- Sélectionner partie de l'information que vous pensez vous devez aller. Si la personne divague, on la fait revenir sur le vif du sujet.
+
+Les trois dernières sont à risque, un peu comme une enquête.
+
+Bruits de réception (intérêt)
