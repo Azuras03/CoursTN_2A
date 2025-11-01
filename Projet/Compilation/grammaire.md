@@ -1,65 +1,115 @@
-〈file〉 ::= 〈class〉* 〈class_Main〉EOF
+File
+  ::= ClassDecl* MainClass EOF
 
-〈class〉 ::= class 〈ident〉(extends 〈ident〉)? { decl* }
+ClassDecl
+  ::= 'class' ident ClassExtOpt '{' MemberDeclList '}'
 
-〈decl〉 ::= 〈type〉〈ident〉; | 〈constructor〉 | 〈method〉
+ClassExtOpt
+  ::= 'extends' ident
+   | ε
 
-〈constructor〉 ::= 〈ident〉( 〈params〉? ) { 〈stmt〉* }
+MemberDeclList
+  ::= (MemberDecl)*
 
-〈method〉 ::= (〈type〉 | void) 〈ident〉( 〈params〉? ) { 〈stmt〉* }
+MemberDecl
+  ::= Type ident MemberDeclTail
+   | ident '(' ParamListOpt ')' Block    // constructeur
 
-〈params〉 ::= 〈type〉〈ident〉 
-    | 〈type〉〈ident〉, 〈params〉
+MemberDeclTail
+  ::= ';'                              // attribut
+   | '=' Expr ';'                      // attribut initialisé
+   | '(' ParamListOpt ')' Block        // méthode
 
-〈type〉 ::= boolean 
-    | int 
-    | 〈ident〉
+ParamListOpt
+  ::= ParamList
+   | ε
 
-〈class_Main〉 ::= class Main {
-        public static void main(String 〈ident〉[]) { 〈stmt〉* }
-    }
+ParamList
+  ::= Param (',' Param)*
 
-〈expr〉 ::= 〈integer〉 | 〈string〉 | true | false
-    | this
-    | null
-    | ( 〈expr〉)
-    | 〈ident〉
-    | 〈expr〉. 〈ident〉
-    | 〈ident〉= 〈expr〉
-    | 〈expr〉. 〈ident〉= 〈expr〉
-    | 〈ident〉( 〈lexpr〉? )
-    | 〈expr〉. 〈ident〉( 〈lexpr〉? )
-    | new 〈ident〉( 〈lexpr〉? )
-    | ! 〈expr〉
-    |- 〈expr〉
-    | 〈expr〉〈binop〉〈expr〉
-    | ( 〈type〉) 〈expr〉
-    | 〈expr〉instanceof 〈type〉
+Param
+  ::= Type ident
 
-〈binop〉 ::= == 
-    | != 
-    | < 
-    | <= 
-    | > 
-    | >= 
-    | + 
-    |- 
-    | * 
-    | / 
-    | % 
-    | && 
-    | |
-    |
+Type
+  ::= 'boolean' | 'int' | ident
 
-〈lexpr〉 ::= 〈expr〉
-    | 〈expr〉, 〈lexpr〉
+MainClass
+  ::= 'class' 'Main' '{'
+        'public' 'static' 'void' 'main'
+        '(' 'String' ident '[' ']' ')' Block
+      '}'
 
-〈stmt〉 ::= ;
-    | 〈expr〉;
-    | 〈type〉〈ident〉;
-    | 〈type〉〈ident〉= 〈expr〉;
-    | if ( 〈expr〉) 〈stmt〉
-    | if ( 〈expr〉) 〈stmt〉else 〈stmt〉
-    | for ( 〈expr〉? ; 〈expr〉? ; 〈expr〉? ) 〈stmt〉
-    | { 〈stmt〉* }
-    | return 〈expr〉? ;
+Stmt
+  ::= ';'
+   | Expr ';'
+   | Type ident StmtVarTail
+   | 'if' '(' Expr ')' Stmt StmtElseOpt
+   | 'for' '(' ForInit ';' ForCond ';' ForIter ')' Stmt
+   | '{' StmtList '}'
+   | 'return' ExprOpt ';'
+
+StmtVarTail
+  ::= '=' Expr ';'
+   | ';'
+
+StmtElseOpt
+  ::= 'else' Stmt
+   | ε
+
+StmtList
+  ::= (Stmt)*
+
+ExprOpt
+  ::= Expr
+   | ε
+
+ForInit
+  ::= ExprOpt
+ForCond
+  ::= ExprOpt
+ForIter
+  ::= ExprOpt
+
+Expr          ::= AssignExpr
+
+AssignExpr    ::= OrExpr ( '=' AssignExpr )?          // droite-associatif
+
+OrExpr        ::= AndExpr ( '||' AndExpr )*
+
+AndExpr       ::= EqExpr ( '&&' EqExpr )*
+
+EqExpr        ::= RelExpr ( ( '==' | '!=' ) RelExpr )*
+
+RelExpr       ::= AddExpr ( ( '<' | '<=' | '>' | '>=' | 'instanceof' ) AddExpr )*
+
+AddExpr       ::= MulExpr ( ( '+' | '-' ) MulExpr )*
+
+MulExpr       ::= UnaryExpr ( ( '*' | '/' | '%' ) UnaryExpr )*
+
+UnaryExpr     ::= ( '-' | '!' ) UnaryExpr
+               | CastOrPostfix
+
+CastOrPostfix ::= '(' Type ')' UnaryExpr
+               | Postfix
+
+Postfix       ::= Primary PostfixSuffix*
+
+PostfixSuffix ::= '.' ident
+               | '(' ArgListOpt ')'
+
+Primary       ::= integer
+               | string
+               | 'true' | 'false'
+               | 'this'
+               | 'null'
+               | '(' Expr ')'
+               | ident
+               | 'new' ident '(' ArgListOpt ')'
+
+ArgListOpt    ::= ArgList
+               | ε
+
+ArgList       ::= Expr ( ',' Expr )*
+
+Block
+  ::= '{' StmtList '}'
