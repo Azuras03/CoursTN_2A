@@ -1,46 +1,46 @@
 File
-  ::= ClassDecl* MainClass EOF
+ -> ClassDecl* MainClass EOF
 
 ClassDecl
-  ::= 'class' ident ClassExtOpt '{' MemberDeclList '}'
+ -> 'class' ident ClassExtOpt '{' MemberDeclList '}'
 
 ClassExtOpt
-  ::= 'extends' ident
+ -> 'extends' ident
    | ε
 
 MemberDeclList
-  ::= (MemberDecl)*
+ -> (MemberDecl)*
 
 MemberDecl
-  ::= Type ident MemberDeclTail
+ -> Type ident MemberDeclTail
    | ident '(' ParamListOpt ')' Block    // constructeur
 
 MemberDeclTail
-  ::= ';'                              // attribut
+ -> ';'                              // attribut
    | '=' Expr ';'                      // attribut initialisé
    | '(' ParamListOpt ')' Block        // méthode
 
 ParamListOpt
-  ::= ParamList
+ -> ParamList
    | ε
 
 ParamList
-  ::= Param (',' Param)*
+ -> Param (',' Param)*
 
 Param
-  ::= Type ident
+ -> Type ident
 
 Type
-  ::= 'boolean' | 'int' | ident
+ -> 'boolean' | 'int' | ident
 
 MainClass
-  ::= 'class' 'Main' '{'
+ -> 'class' 'Main' '{'
         'public' 'static' 'void' 'main'
         '(' 'String' ident '[' ']' ')' Block
       '}'
 
 Stmt
-  ::= ';'
+ -> ';'
    | Expr ';'
    | Type ident StmtVarTail
    | 'if' '(' Expr ')' Stmt StmtElseOpt
@@ -49,55 +49,55 @@ Stmt
    | 'return' ExprOpt ';'
 
 StmtVarTail
-  ::= '=' Expr ';'
+ -> '=' Expr ';'
    | ';'
 
 StmtElseOpt
-  ::= 'else' Stmt
+ -> 'else' Stmt
    | ε
 
 StmtList
-  ::= (Stmt)*
+ -> (Stmt)*
 
 ExprOpt
-  ::= Expr
+ -> Expr
    | ε
 
 ForInit
-  ::= ExprOpt
+ -> ExprOpt
 ForCond
-  ::= ExprOpt
+ -> ExprOpt
 ForIter
-  ::= ExprOpt
+ -> ExprOpt
 
-Expr          ::= AssignExpr
+Expr -> AssignExpr
 
-AssignExpr    ::= OrExpr ( '=' AssignExpr )?          // droite-associatif
+AssignExpr -> OrExpr ( '=' AssignExpr )?          // droite-associatif
 
-OrExpr        ::= AndExpr ( '||' AndExpr )*
+OrExpr -> AndExpr ( '||' AndExpr )*
 
-AndExpr       ::= EqExpr ( '&&' EqExpr )*
+AndExpr -> EqExpr ( '&&' EqExpr )*
 
-EqExpr        ::= RelExpr ( ( '==' | '!=' ) RelExpr )*
+EqExpr -> RelExpr ( ( '==' | '!=' ) RelExpr )*
 
-RelExpr       ::= AddExpr ( ( '<' | '<=' | '>' | '>=' | 'instanceof' ) AddExpr )*
+RelExpr -> AddExpr ( ( '<' | '<=' | '>' | '>=' | 'instanceof' ) AddExpr )*
 
-AddExpr       ::= MulExpr ( ( '+' | '-' ) MulExpr )*
+AddExpr -> MulExpr ( ( '+' | '-' ) MulExpr )*
 
-MulExpr       ::= UnaryExpr ( ( '*' | '/' | '%' ) UnaryExpr )*
+MulExpr -> UnaryExpr ( ( '*' | '/' | '%' ) UnaryExpr )*
 
-UnaryExpr     ::= ( '-' | '!' ) UnaryExpr
+UnaryExpr -> ( '-' | '!' ) UnaryExpr
                | CastOrPostfix
 
-CastOrPostfix ::= '(' Type ')' UnaryExpr
+CastOrPostfix -> '(' Type ')' UnaryExpr
                | Postfix
 
-Postfix       ::= Primary PostfixSuffix*
+Postfix -> Primary PostfixSuffix*
 
-PostfixSuffix ::= '.' ident
+PostfixSuffix -> '.' ident
                | '(' ArgListOpt ')'
 
-Primary       ::= integer
+Primary -> integer
                | string
                | 'true' | 'false'
                | 'this'
@@ -106,10 +106,10 @@ Primary       ::= integer
                | ident
                | 'new' ident '(' ArgListOpt ')'
 
-ArgListOpt    ::= ArgList
+ArgListOpt -> ArgList
                | ε
 
-ArgList       ::= Expr ( ',' Expr )*
+ArgList -> Expr ( ',' Expr )*
 
 Block
-  ::= '{' StmtList '}'
+ -> '{' StmtList '}'
