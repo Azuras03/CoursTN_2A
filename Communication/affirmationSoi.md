@@ -47,3 +47,6 @@ Secrétaire :
 Révélation sur soi : Dire ce qu'on ressent
 
 Il faudrait que la secrétaire repasse sur le pôle+, quand le moment est le bon, faire une révélation sur soi ou dire ce qui lui a gêné.
+
+**Référence** : Fais-toi confiance - I FILLIOSA
+
