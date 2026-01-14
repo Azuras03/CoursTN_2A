@@ -76,4 +76,36 @@ Mémoriser imbrication, ...
 Soit k : La différence de niveau
 - Le chainage statique du bloc <u>appelé</u> dont désigner le (dernier) bloc d'imbrication Ny-1 = Nz
 - Depuis l'appelant, on trouve le bloc d'imbrication Nz en faisant (Nx-Nz) parcours de chainages statiques
-  - Remonter Nx-Ny + 1 chainages statiques
+  - Remonter Nx-Ny + 1 chainages statique
+
+<u>Les paramètres</u> de fct/procédures/méthodes
+-> Mode de passage
+
+- <u>Par valeur</u>:
+  - Le paramètre effectif prend la <u>valeur</u> du paramètre formel
+    - factoriel(n:int) <- formel          factoriel(5) <- effectif
+
+
+## Exercice
+
+### Exercice 2 
+
+Pile :
+
+- @retour
+- dyn
+- statiques
+- @A            
+- @B            main()
+- @C            
+- @A 
+- @B 
+- @retour
+- val sp
+- val bp
+- -------
+- @X
+- @Y            P1()
+- @retour
+- @retour 
+- etc.

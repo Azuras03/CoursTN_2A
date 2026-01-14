@@ -9,7 +9,6 @@ CM2 :
 A venir
 Lire de page 18 à 25
 
-
-CM3 :
+CM
 
 Lire de page 26 à 32 (sans la mise à jour du dico) et mini-exercice 6
