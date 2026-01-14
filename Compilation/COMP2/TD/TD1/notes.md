@@ -65,3 +65,15 @@ On a :
     - Alors on a : Ny >= Nx (si Nx = Ny, I est une var locale)
       => Il faut "remonter" Ny-Nx ch. statiques depuis l'environnement courant pour avoir la base du bloc qui déclare i.
 
+Mémoriser imbrication, ...
+
+
+- 2) Comment mettre en place (en pile) le chainage statique?
+
+<u>Hypothèse</u> : 
+- L'appelant est un bloc d'imbrication Nx
+- L'appelant est un bloc d'imbrication Ny
+Soit k : La différence de niveau
+- Le chainage statique du bloc <u>appelé</u> dont désigner le (dernier) bloc d'imbrication Ny-1 = Nz
+- Depuis l'appelant, on trouve le bloc d'imbrication Nz en faisant (Nx-Nz) parcours de chainages statiques
+  - Remonter Nx-Ny + 1 chainages statiques
