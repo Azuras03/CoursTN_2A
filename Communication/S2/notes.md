@@ -49,3 +49,22 @@ Désarmer la colère de l'autre
 - Technique du brouillard / oreiller (la laisser extérioriser)
 - Révélation sur soi
 - Réassurance, la rassurer
+
+### Sixième situation
+
+Critique DESC, et on peut même passer quelques étapes. Juste on fait Demande positive, Révélation sur soi
+
+### Septième situation
+
+Dialogue
+- Informer
+- Enquête
+
+Alternative
+- Réunion
+
+### Huitième situation
+
+Méthode DESC
+
+Vu que personne opposante, on lui fait faire semblant qu'elle décide
