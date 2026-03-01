@@ -1,0 +1,21 @@
+@startuml
+skinparam shadowing false
+skinparam node {
+    BackgroundColor<<Entier>> LightGreen
+    BackgroundColor<<Relaxed>> LightBlue
+}
+
+title Arbre de Séparation et Évaluation (Branch & Bound) - Exercice Sac à Dos
+
+node "<b>P0 (Racine - Relaxation)</b>\nx1=1, x2=2/3, x3=0\n<b>Z = 24</b>" as P0 <<Relaxed>>
+
+node "<b>P1 (Branche x2 = 1)</b>\nx1=0, x2=1, x3=1\n<b>Z = 21</b>\n(SOLUTION ENTIÈRE)" as P1 <<Entier>>
+
+node "<b>P2 (Branche x2 = 0)</b>\nx1=1, x2=0, x3=2/3\n<b>Z = 22</b>" as P2 <<Relaxed>>
+
+P0 -down-> P1 : x2 = 1
+P0 -down-> P2 : x2 = 0
+
+note right of P1 : Cette branche s'arrête :\nle record est 21.
+note left of P2 : Z=22 est > record (21).\nOn devrait continuer à séparer\nsi on n'avait pas déjà fini.
+@enduml
