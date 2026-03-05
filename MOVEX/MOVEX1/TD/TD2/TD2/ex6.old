@@ -1,0 +1,120 @@
+---- MODULE ex6 ----
+EXTENDS TLC, Integers
+
+CONSTANTS x0, y0, z0
+
+max(S) == CHOOSE m \in S : (\A y \in S : m >= y)
+
+(*--algorithm ex6
+variables x = x0, y = y0, z = z0
+define
+    Pre == 
+        /\ x0 \in Nat 
+        /\ y0 \in Nat 
+        /\ z0 \in Int
+    Post == z = max({x0,y0})
+    Annot0 == 
+        /\ x = x0 
+        /\ y = y0 
+        /\ z = z0
+        /\ Pre
+    Annot1 == 
+        /\ x < y 
+        /\ x = x0
+        /\ y = y0
+        /\ z = z0
+        /\ Pre
+    Annot2 == 
+        /\ x < y
+        /\ x = x0
+        /\ y = y0
+        /\ Pre
+        /\ z = y0
+    Annot3 == 
+        /\ x >= y
+        /\ Annot0
+    Annot4 ==
+        /\ x >= y
+        /\ y = y0
+        /\ Pre
+        /\ z = x0
+    Annot5 ==
+        /\ z = max({x0,y0})
+        /\ x = x0
+        /\ y = y0
+        /\ Pre
+end define;
+begin
+    l0: assert Annot0;
+        if x < y then
+            l1: assert Annot1;
+                z := y;
+            l2: assert Annot2;
+        else 
+            l3: assert Annot3;
+                z := x;
+            l4: assert Annot4;
+        end if;
+    l5: assert Annot5;
+end algorithm;*)
+\* BEGIN TRANSLATION
+VARIABLES pc, x, y, z
+
+(* define statement *)
+Annot1
+Annot2
+Annot3
+Annot4
+Annot5
+
+
+vars == << pc, x, y, z >>
+
+Init == (* Global variables *)
+        /\ x = x0
+        /\ y = y0
+        /\ z = z0
+        /\ pc = "l0"
+
+l0 == /\ pc = "l0"
+      /\ Assert(Annot1, "Failure of assertion at line 16, column 9.")
+      /\ IF x < y
+            THEN /\ pc' = "l1"
+            ELSE /\ pc' = "l3"
+      /\ UNCHANGED << x, y, z >>
+
+l1 == /\ pc = "l1"
+      /\ Assert(Annot2, "Failure of assertion at line 18, column 17.")
+      /\ z' = y
+      /\ pc' = "l2"
+      /\ UNCHANGED << x, y >>
+
+l2 == /\ pc = "l2"
+      /\ Assert(Annot3, "Failure of assertion at line 20, column 17.")
+      /\ pc' = "Done"
+      /\ UNCHANGED << x, y, z >>
+
+l3 == /\ pc = "l3"
+      /\ Assert(Annot4, "Failure of assertion at line 22, column 17.")
+      /\ z' = x
+      /\ pc' = "l4"
+      /\ UNCHANGED << x, y >>
+
+l4 == /\ pc = "l4"
+      /\ Assert(Annot5, "Failure of assertion at line 24, column 17.")
+      /\ pc' = "Done"
+      /\ UNCHANGED << x, y, z >>
+
+(* Allow infinite stuttering to prevent deadlock on termination. *)
+Terminating == pc = "Done" /\ UNCHANGED vars
+
+Next == l0 \/ l1 \/ l2 \/ l3 \/ l4
+           \/ Terminating
+
+Spec == Init /\ [][Next]_vars
+
+Termination == <>(pc = "Done")
+
+\* END TRANSLATION
+
+====

@@ -1,0 +1,58 @@
+---- MODULE ex7 ----
+EXTENDS TLC, Integers
+
+(*--algorithm ex7
+variables x=10, y=z+x, z=2*x
+define 
+    Annot1 ==  x = 10 /\ y = z + x /\ z = 2 * x
+    Annot2 ==  x = 10 /\ y =  x + 2 * 10
+end define;
+begin
+    l1: assert Annot1;
+        y := z+x;
+    l2: assert Annot2;
+        skip;
+end algorithm;*)
+
+\* BEGIN TRANSLATION
+VARIABLES pc, x, y, z
+
+(* define statement *)
+Annot1 ==  x = 10 /\ y = z + x /\ z = 2 * x
+Annot2 ==  x = 10 /\ y =  x + 2 * 10
+
+
+vars == << pc, x, y, z >>
+
+Init == (* Global variables *)
+        /\ x = 10
+        /\ y = z+x
+        /\ z = 2*x
+        /\ pc = "l1"
+
+l1 == /\ pc = "l1"
+      /\ Assert(Annot1, "Failure of assertion at line 11, column 9.")
+      /\ y' = z+x
+      /\ pc' = "l2"
+      /\ UNCHANGED << x, z >>
+
+l2 == /\ pc = "l2"
+      /\ Assert(Annot2, "Failure of assertion at line 13, column 9.")
+      /\ TRUE
+      /\ pc' = "Done"
+      /\ UNCHANGED << x, y, z >>
+
+(* Allow infinite stuttering to prevent deadlock on termination. *)
+Terminating == pc = "Done" /\ UNCHANGED vars
+
+Next == l1 \/ l2
+           \/ Terminating
+
+Spec == Init /\ [][Next]_vars
+
+Termination == <>(pc = "Done")
+
+\* END TRANSLATION
+
+
+====
