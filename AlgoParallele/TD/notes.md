@@ -1,0 +1,1 @@
+Notes : Réfléchir à algo 3 unités parallélisme de données
